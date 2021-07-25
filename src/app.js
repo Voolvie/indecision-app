@@ -1,31 +1,45 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import IndecisionApp from './components/IndecisionApp'
+
+const Layout = (props) => {
+    return (
+        <div>
+            <p>Header</p>
+            {props.children}
+            <p> footer</p>
+        </div>
+    )
+}
+
 const appRoot = document.getElementById('app')
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'))
+ReactDOM.render((
+<Layout>
+    <p>This is inline</p>
+</Layout>), document.getElementById('app'))
 
-class OldSyntax {
-    constructor() {
-        this.name = 'Mike'
-        this.getGreeting = this.getGreeting.bind(this)
-    }
-    getGreeting() {
-        return `hi my name is ${this.name}`
-    }
-}
-const oldSyntax = new OldSyntax()
-const getGreeting = oldSyntax.getGreeting
-console.log(getGreeting())
+// class OldSyntax {
+//     constructor() {
+//         this.name = 'Mike'
+//         this.getGreeting = this.getGreeting.bind(this)
+//     }
+//     getGreeting() {
+//         return `hi my name is ${this.name}`
+//     }
+// }
+// const oldSyntax = new OldSyntax()
+// const getGreeting = oldSyntax.getGreeting
+// console.log(getGreeting())
 
-class NewSyntax {
-    name = 'Jen'
-    newgetGreeting = () => {
-        return `hi my name is ${this.name}`  
-    }
-}
-const newSyntaax = new NewSyntax
-const newgetGreeting = newSyntaax.newgetGreeting
-console.log(newgetGreeting())
+// class NewSyntax {
+//     name = 'Jen'
+//     newgetGreeting = () => {
+//         return `hi my name is ${this.name}`  
+//     }
+// }
+// const newSyntaax = new NewSyntax
+// const newgetGreeting = newSyntaax.newgetGreeting
+// console.log(newgetGreeting())
 
 // class Header extends React.Component {
 //    render() {
