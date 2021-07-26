@@ -16,6 +16,13 @@ module.exports = {
                     babelrc: true     // No need to duplicate settings, reads from .babelrc
                 }
             }
+        },{
+            test: /\.scss$/,
+            use: [
+                'style-loader',
+                'css-loader',
+                'sass-loader'
+            ]
         }]
     },
     devtool: 'eval-cheap-module-source-map',
