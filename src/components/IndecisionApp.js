@@ -57,7 +57,7 @@ export default class IndecisionApp extends React.Component {
         console.log('component will unmount')
     }
     render(){
-        const subtitle = 'Randomize your tasks'
+        const subtitle = 'Randomize your options'
         
         return(
         <div>
